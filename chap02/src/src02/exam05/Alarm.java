@@ -9,10 +9,25 @@ public class Alarm {
 		int M = scanner.nextInt();
 		
 		if( M - 45 >= 0 ) {
+			M -= 45;
 			System.out.println(H + " " + M);
 		} else {
-			if() {
-				
+			if(H - 1 < 0) {
+				H = 23;
+				if (M - 45 < 0 ) {
+					M = (M + 15);
+				} else {
+					M -= 45;
+				}
+				System.out.println(H + " " + M);
+			} else {
+				H -= 1;
+				if (M - 45 < 0 ) {
+					M = (M + 15);
+				} else {
+					M -= 45;
+				}
+				System.out.println(H + " " + M);
 			}
 		}
 	}
