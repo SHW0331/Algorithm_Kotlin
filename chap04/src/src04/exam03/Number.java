@@ -26,6 +26,7 @@ public class Number {
 			}
 			System.out.println(count);
 			count = 0;
+			1;
 		}
 	}
 }
