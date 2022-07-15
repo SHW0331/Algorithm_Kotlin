@@ -12,21 +12,19 @@ public class Number {
 			int num = scanner.nextInt();
 			result *= num;
 		}
-		System.out.println(result);
-		
 		String find = Integer.toString(result);	
 		
-		int count = 0;
+		int count[] = new int[10];
 		for(int i=0; i<find.length(); i++) {
 			for(int y=0; y<10; y++) {
-				char num = (char)(y);
-				if(find.charAt(i) == num) {
-					count += 1;
+				String num = Integer.toString(y);
+				if(find.charAt(i) == num.charAt(0)) {
+					count[y] += 1;
 				}
 			}
-			System.out.println(count);
-			count = 0;
-			1;
 		}
+		
+		for(int i=0; i<10; i++)
+			System.out.println(count[i]);
 	}
 }
