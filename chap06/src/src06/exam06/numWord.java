@@ -1,25 +1,24 @@
 package src06.exam06;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class numWord {
 
 	public static void main(String[] args) {
-		String Word = "string";
-		int y = 115;
-		char ch = (char)y;
-		System.out.println(Word.charAt(2));
-		System.out.println(ch);
+		Scanner scanner = new Scanner(System.in);
+		String str = scanner.nextLine();
+		int count = 0;
 		
-		int arr[] = new int[26];
-		Arrays.fill(arr, 0);
+		for(int i=1; i<str.length()-1; i++) {
+			if(str.charAt(i) == ' ') {
+				count++;
+			} 
+		}
 		
-		if(Word.charAt(0) == (char)y)
-			System.out.println("Âü");
-		
-		for(int i=0; i<arr.length; i++) {
-			System.out.println(arr[i]);
+		if(str.length() == 1 && str.charAt(0) == ' ') {
+			System.out.println(0);
+		} else {
+			System.out.println(count + 1);
 		}
 	}
-
 }
