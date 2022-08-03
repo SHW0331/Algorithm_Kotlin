@@ -6,24 +6,16 @@ public class breakEven {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int num = scanner.nextInt();
-		String arr[] = new String[num];
+		int A = scanner.nextInt();
+		int B = scanner.nextInt();
+		int C = scanner.nextInt();
 		int result = 0;
 		
-		for(int i=0; i<num; i++) {
-			String str = scanner.next();
-			arr[i] = str;
-		}
+		if(C-B > 0 && A != 0 && C !=0 && B !=0)
+			result = A / (C-B) + 1;
+		else
+			result = -1;
 		
-		for(int i=0; i<arr[i].length(); i++) {
-			if(arr[i].length() == 1)
-				result++;
-			else if(
-					) {
-				
-			} else {
-				
-			}
-		}
+		System.out.println(result);
 	}
 }
